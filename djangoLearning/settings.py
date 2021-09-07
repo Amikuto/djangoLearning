@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangoLearning.wsgi.application'
+wsgi_application = 'djangoLearning.wsgi.application'
 
 
 # Database
