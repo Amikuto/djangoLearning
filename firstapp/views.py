@@ -3,7 +3,8 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello World!")
+    data = {"header": "Hello Django", "message": "Welcome to Python!"}
+    return render(request, "index.html", context=data)
 
 
 def about(request):

@@ -19,11 +19,9 @@ from django.urls import re_path
 from firstapp import views
 
 urlpatterns = [
-    path('', views.index, name='home'),
+    path('', views.index),
     re_path(r'^products/$', views.products),
     re_path(r'^products/(?P<productid>\d+)/', views.products),
     re_path(r'^users/(?P<id>\d+)/(?P<name>\D+)/', views.users),
-    # re_path(r'^about', views.about),
-    # re_path(r'^contact', views.contact),
     path('admin/', admin.site.urls),
 ]
