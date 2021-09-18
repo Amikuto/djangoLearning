@@ -8,11 +8,14 @@ from django.views.generic.base import RedirectView
 from main import views
 
 
-favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
+favicon_view = RedirectView.as_view(url='/static/images/favicon.png', permanent=True)
 
 urlpatterns = [
-    path('', views.index),
-    path('about/', views.about),
+    path('', views.index, name="home"),
+    path('about/', views.about, name="about"),
+    path('prices/', views.prices, name="prices"),
+    path('contacts/', views.contacts, name="contacts"),
+    path('feedback/', views.feedback, name="feedback"),
     path('admin/', admin.site.urls),
     re_path(r'^favicon\.ico$', favicon_view),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
