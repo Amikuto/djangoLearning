@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Запись к врачу{% endblock %}
+
+{% block content %}
+  <h1>Вы на странице записи к врачу</h1>
+  {% for i in employees %}
+    <li>{{ i }}</li>
+  {% endfor %}
+{% endblock %}

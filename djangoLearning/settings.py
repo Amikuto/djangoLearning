@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'services',
 ]
 
 MIDDLEWARE = [
@@ -65,8 +66,14 @@ wsgi_application = 'djangoLearning.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'stom',
+        'USER': 'stom_admin',
+        'PASSWORD': '110326',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
